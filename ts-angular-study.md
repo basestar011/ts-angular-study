@@ -1,1 +1,1 @@
-study
+typescript & angular study project
