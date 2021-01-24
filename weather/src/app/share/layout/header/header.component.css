@@ -2,6 +2,7 @@
     height: 20%;
 }
 .title {
+    height: 100%;
     font-size: 50px;
     font-weight: bold;
     background-color: lightskyblue;
@@ -9,4 +10,5 @@
 }
 h1 {
     margin: 0;
+    text-align: center;
 }
