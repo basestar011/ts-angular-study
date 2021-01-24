@@ -1,0 +1,12 @@
+.container {
+    height: 20%;
+}
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    background-color: lightskyblue;
+    text-align: center;
+}
+h1 {
+    margin: 0;
+}

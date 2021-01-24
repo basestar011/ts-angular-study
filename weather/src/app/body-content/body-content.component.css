@@ -1,0 +1,16 @@
+.bodyContent {
+    display: inline-block;
+    width: 100%;
+    min-height: 800px;
+    height: 80%;
+    border: 1px solid lightpink;
+    background-color: lightpink;
+}
+
+.content {
+    display: inline-block;
+    width: 80%;
+    height: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}

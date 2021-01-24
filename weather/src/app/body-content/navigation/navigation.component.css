@@ -1,0 +1,7 @@
+.navigation {
+    display: inline-block;
+    border: 1px solid black;
+    width: 18%;
+    height: 100%;
+    border-collapse: collapse;
+}
