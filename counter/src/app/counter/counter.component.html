@@ -1,5 +1,4 @@
-<button>-</button>
-
-<span>{{ count }}</span>
-
-<button>+</button>
+<input type="text" value="{{count}}" readonly />
+<button (click)="excute(-1)" [disabled]="count == 0">-</button>
+<button (click)="excute(1)">+</button>
+<button (click)="reset()">reset</button>
