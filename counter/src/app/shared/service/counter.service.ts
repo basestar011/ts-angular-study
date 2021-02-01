@@ -9,11 +9,8 @@ export class CounterService {
   private counterSubject: BehaviorSubject<number> = new BehaviorSubject<number>(0);
   private count$ = this.counterSubject.asObservable();
 
-  constructor() {
-  }
-
   public excute(val : number) {
-    this.counterSubject.next(val);
+    this.counterSubject.next(this.getCurrentValue() + val);
   }
 
   private getCurrentValue() {

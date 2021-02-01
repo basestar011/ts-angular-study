@@ -1,11 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { ModuleWithProviders, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { CounterModule } from './counter/counter.module';
-import { RouterModule } from '@angular/router';
-
-const appRouting: ModuleWithProviders<RouterModule> = RouterModule.forRoot([]);
+import { CounterModule } from './shared/counter/counter.module';
+import { MainModule } from './main/main.module';
 
 @NgModule({
   declarations: [
@@ -13,8 +11,8 @@ const appRouting: ModuleWithProviders<RouterModule> = RouterModule.forRoot([]);
   ],
   imports: [
     BrowserModule,
-    appRouting,
-    CounterModule
+    CounterModule,
+    MainModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MainComponent } from './main.component';
+import { CounterComponent } from './counter.component';
 
 @NgModule({
   declarations: [
-    MainComponent
+    CounterComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    MainComponent
+    CounterComponent
   ]
 })
-export class MainModule { }
+export class CounterModule { }

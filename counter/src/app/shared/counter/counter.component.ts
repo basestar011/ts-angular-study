@@ -1,21 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
-import { CounterService } from './counter.service';
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { CounterService } from '../service/counter.service';
 
 @Component({
   selector: 'app-counter',
   templateUrl: './counter.component.html',
   styleUrls: ['./counter.component.css']
 })
-export class CounterComponent implements OnInit {
+export class CounterComponent {
 
+  title = 'CounterComponent'
   count$: Observable<number>;
 
   constructor(private counterService: CounterService) {
     this.count$ = this.counterService.getObservableCounter();
-  }
-
-  ngOnInit(): void {
   }
 
   plus() {
