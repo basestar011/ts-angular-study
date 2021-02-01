@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
+import { CounterService } from './counter.service';
 
 @Component({
   selector: 'app-counter',
@@ -8,23 +9,21 @@ import { Subject } from 'rxjs';
 })
 export class CounterComponent implements OnInit {
 
-  countSubject: Subject<number> = new Subject<number>();
-  count: number = 0;
+  count$: Observable<number>;
 
-  constructor() { }
+  constructor(private counterService: CounterService) {
+    this.count$ = this.counterService.getObservableCounter();
+  }
 
   ngOnInit(): void {
-    this.countSubject.subscribe(val => {
-      this.count += val;
-    });
   }
 
-  excute(val : number) {
-    this.countSubject.next(val);
+  plus() {
+    this.counterService.excute(1);
   }
 
-  reset() {
-    this.count = 0;
+  minus() {
+    this.counterService.excute(-1);
   }
-
+  
 }
