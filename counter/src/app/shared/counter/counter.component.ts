@@ -9,7 +9,6 @@ import { CounterService } from '../service/counter.service';
 })
 export class CounterComponent {
 
-  title = 'CounterComponent'
   count$: Observable<number>;
 
   constructor(private counterService: CounterService) {

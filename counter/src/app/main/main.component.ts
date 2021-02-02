@@ -8,8 +8,7 @@ import { CounterService } from '../shared/service/counter.service';
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent {
-
-  title = 'MainComponent'
+  
   count$: Observable<number>;
 
   constructor(private counterService: CounterService) {
